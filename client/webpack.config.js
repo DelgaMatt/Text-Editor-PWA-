@@ -12,9 +12,6 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      database: './src/js/database.js',
-      editor: './src/js/editor.js',
-      header: './src/js/header.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -24,17 +21,20 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: 'jate'
+        title: 'Just Another Text Editor'
       }),
+      //injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
         fingerprints: false,
+        inject: true,
         name: 'Just Another Text Editor',
         short_name: 'jate',
         description: 'A text editor that meets PWA criteria',
+        crossorigin: null,
         start_url: '/',
         publicPath: './',
         background_color: '#225ca3',
