@@ -29,7 +29,7 @@ export default class {
       if(data != null){
         data = data[0].value;
       }
-      this.editor.setValue(data || localData || header);
+      this.editor.setValue(data || localData ||{ header });
     });
 
     this.editor.on('change', () => {
