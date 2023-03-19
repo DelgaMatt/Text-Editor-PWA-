@@ -34,11 +34,11 @@ module.exports = () => {
         name: 'Just Another Text Editor',
         short_name: 'jate',
         description: 'A text editor that meets PWA criteria',
-        crossorigin: null,
-        start_url: '/',
-        publicPath: './',
         background_color: '#225ca3',
         theme_color: '#225ca3',
+        start_url: './',
+        publicPath: './',
+
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -56,16 +56,13 @@ module.exports = () => {
           use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
-        },
-        {
           test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
             },
           },
         },
