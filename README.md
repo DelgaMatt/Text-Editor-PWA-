@@ -17,8 +17,8 @@
   If you would like to install this application, click on the 'Install' button on the top left side of the deployed application or click the installation logo within the browser search bar.
   ## Usage
   ![127 0 0 1_5501_client_dist_index html](https://user-images.githubusercontent.com/115049801/226208925-5e95dbde-7447-49e0-bdde-e383022932bf.png)
-  
-  To use this application, open the deployed application [here]() and follow installation installation instructions.
+
+  To use this application, open the deployed application [here](https://text-editor-pwa-2.herokuapp.com/) and follow installation instructions above.
   ## License
   This app is covered under the [MIT License](https://opensource.org/licenses/MIT)<br>
   Copyright (C) Matthew Delgado 2023
